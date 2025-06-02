@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PaginateRequest;
 use App\Http\Requests\ProjectRequest;
-use App\Http\Resources\ClientResource;
 use App\Http\Resources\ProjectResource;
 use App\Models\Project;
 use App\Services\ProjectService;

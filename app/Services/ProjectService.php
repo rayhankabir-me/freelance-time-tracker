@@ -13,7 +13,7 @@ use App\Http\Requests\PaginateRequest;
 class ProjectService
 {
     public $project;
-    public $projectFilter = ['name', 'email', 'contact_person'];
+    public $projectFilter = ['title', 'client_id', 'status', 'deadline'];
 
 
     /**

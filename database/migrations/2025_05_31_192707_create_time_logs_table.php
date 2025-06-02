@@ -17,7 +17,7 @@ return new class extends Migration
             $table->timestamp('start_time')->default(date('y-m-d h:m:s'));
             $table->timestamp('end_time')->default(date('y-m-d h:m:s'));
             $table->longText('description')->nullable();
-            $table->decimal('hours', 5, 2)->nullable(); // calculated
+            $table->decimal('hours', 5, 2)->nullable();
             $table->timestamps();
         });
     }
