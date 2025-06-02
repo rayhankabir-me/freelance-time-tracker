@@ -28,7 +28,7 @@ class Project extends Model
             'title'         => 'string',
             'description'   => 'string',
             'status'        => 'string',
-            'deadline'      => 'decimal:6',
+            'deadline'      => 'string',
         ];
     }
 

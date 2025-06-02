@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,5 +24,12 @@ Route::prefix('clients')->name('clients.')->group(function () {
     Route::get('/show/{client}', [ClientController::class, 'show']);
     Route::match(['post', 'put', 'patch'], '/{client}', [ClientController::class, 'update']);
     Route::delete('/{client}', [ClientController::class, 'destroy']);
+});
 
+Route::prefix('projects')->name('projects.')->group(function () {
+    Route::get('/', [ProjectController::class, 'index']);
+    Route::post('/', [ProjectController::class, 'store']);
+    Route::get('/show/{project}', [ProjectController::class, 'show']);
+    Route::match(['post', 'put', 'patch'], '/{project}', [ProjectController::class, 'update']);
+    Route::delete('/{project}', [ProjectController::class, 'destroy']);
 });
